@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserSaveArticle = exports.User = exports.Survey = exports.Quiz = exports.Question = exports.Dimension = exports.Article = void 0;
+var Article_1 = require("./Article");
+Object.defineProperty(exports, "Article", { enumerable: true, get: function () { return Article_1.Article; } });
+var Dimension_1 = require("./Dimension");
+Object.defineProperty(exports, "Dimension", { enumerable: true, get: function () { return Dimension_1.Dimension; } });
+var Question_1 = require("./Question");
+Object.defineProperty(exports, "Question", { enumerable: true, get: function () { return Question_1.Question; } });
+var Quiz_1 = require("./Quiz");
+Object.defineProperty(exports, "Quiz", { enumerable: true, get: function () { return Quiz_1.Quiz; } });
+var Survey_1 = require("./Survey");
+Object.defineProperty(exports, "Survey", { enumerable: true, get: function () { return Survey_1.Survey; } });
+var User_1 = require("./User");
+Object.defineProperty(exports, "User", { enumerable: true, get: function () { return User_1.User; } });
+var UserSaveArticle_1 = require("./UserSaveArticle");
+Object.defineProperty(exports, "UserSaveArticle", { enumerable: true, get: function () { return UserSaveArticle_1.UserSaveArticle; } });

@@ -1,0 +1,1 @@
+export { QuizDimensionsArgs } from "./QuizDimensionsArgs";

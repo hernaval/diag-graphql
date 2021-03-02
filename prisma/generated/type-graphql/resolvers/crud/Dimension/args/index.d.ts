@@ -1,0 +1,10 @@
+export { AggregateDimensionArgs } from "./AggregateDimensionArgs";
+export { CreateDimensionArgs } from "./CreateDimensionArgs";
+export { DeleteDimensionArgs } from "./DeleteDimensionArgs";
+export { DeleteManyDimensionArgs } from "./DeleteManyDimensionArgs";
+export { FindFirstDimensionArgs } from "./FindFirstDimensionArgs";
+export { FindManyDimensionArgs } from "./FindManyDimensionArgs";
+export { FindUniqueDimensionArgs } from "./FindUniqueDimensionArgs";
+export { UpdateDimensionArgs } from "./UpdateDimensionArgs";
+export { UpdateManyDimensionArgs } from "./UpdateManyDimensionArgs";
+export { UpsertDimensionArgs } from "./UpsertDimensionArgs";

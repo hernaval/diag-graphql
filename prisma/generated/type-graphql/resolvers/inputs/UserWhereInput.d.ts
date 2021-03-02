@@ -1,0 +1,33 @@
+import { BoolNullableFilter } from "../inputs/BoolNullableFilter";
+import { DateTimeNullableFilter } from "../inputs/DateTimeNullableFilter";
+import { StringFilter } from "../inputs/StringFilter";
+import { StringNullableFilter } from "../inputs/StringNullableFilter";
+import { SurveyListRelationFilter } from "../inputs/SurveyListRelationFilter";
+import { UserSaveArticleListRelationFilter } from "../inputs/UserSaveArticleListRelationFilter";
+export declare class UserWhereInput {
+    AND?: UserWhereInput[] | undefined;
+    OR?: UserWhereInput[] | undefined;
+    NOT?: UserWhereInput[] | undefined;
+    id?: StringFilter | undefined;
+    email?: StringFilter | undefined;
+    emailConfirmed?: BoolNullableFilter | undefined;
+    passwordHash?: StringFilter | undefined;
+    username?: StringNullableFilter | undefined;
+    firstName?: StringFilter | undefined;
+    lastName?: StringFilter | undefined;
+    gender?: StringFilter | undefined;
+    function?: StringFilter | undefined;
+    organisation?: StringFilter | undefined;
+    category?: StringFilter | undefined;
+    companySize?: StringFilter | undefined;
+    activity?: StringFilter | undefined;
+    country?: StringFilter | undefined;
+    phone?: StringFilter | undefined;
+    status?: StringNullableFilter | undefined;
+    role?: StringNullableFilter | undefined;
+    forgotToken?: StringNullableFilter | undefined;
+    createdDate?: DateTimeNullableFilter | undefined;
+    updatedDate?: DateTimeNullableFilter | undefined;
+    Surveys?: SurveyListRelationFilter | undefined;
+    Articles?: UserSaveArticleListRelationFilter | undefined;
+}

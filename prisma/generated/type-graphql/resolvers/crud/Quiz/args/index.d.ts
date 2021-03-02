@@ -1,0 +1,10 @@
+export { AggregateQuizArgs } from "./AggregateQuizArgs";
+export { CreateQuizArgs } from "./CreateQuizArgs";
+export { DeleteManyQuizArgs } from "./DeleteManyQuizArgs";
+export { DeleteQuizArgs } from "./DeleteQuizArgs";
+export { FindFirstQuizArgs } from "./FindFirstQuizArgs";
+export { FindManyQuizArgs } from "./FindManyQuizArgs";
+export { FindUniqueQuizArgs } from "./FindUniqueQuizArgs";
+export { UpdateManyQuizArgs } from "./UpdateManyQuizArgs";
+export { UpdateQuizArgs } from "./UpdateQuizArgs";
+export { UpsertQuizArgs } from "./UpsertQuizArgs";

@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserSaveArticleCrudResolver = exports.UserCrudResolver = exports.SurveyCrudResolver = exports.QuizCrudResolver = exports.QuestionCrudResolver = exports.DimensionCrudResolver = exports.ArticleCrudResolver = void 0;
+var ArticleCrudResolver_1 = require("./Article/ArticleCrudResolver");
+Object.defineProperty(exports, "ArticleCrudResolver", { enumerable: true, get: function () { return ArticleCrudResolver_1.ArticleCrudResolver; } });
+var DimensionCrudResolver_1 = require("./Dimension/DimensionCrudResolver");
+Object.defineProperty(exports, "DimensionCrudResolver", { enumerable: true, get: function () { return DimensionCrudResolver_1.DimensionCrudResolver; } });
+var QuestionCrudResolver_1 = require("./Question/QuestionCrudResolver");
+Object.defineProperty(exports, "QuestionCrudResolver", { enumerable: true, get: function () { return QuestionCrudResolver_1.QuestionCrudResolver; } });
+var QuizCrudResolver_1 = require("./Quiz/QuizCrudResolver");
+Object.defineProperty(exports, "QuizCrudResolver", { enumerable: true, get: function () { return QuizCrudResolver_1.QuizCrudResolver; } });
+var SurveyCrudResolver_1 = require("./Survey/SurveyCrudResolver");
+Object.defineProperty(exports, "SurveyCrudResolver", { enumerable: true, get: function () { return SurveyCrudResolver_1.SurveyCrudResolver; } });
+var UserCrudResolver_1 = require("./User/UserCrudResolver");
+Object.defineProperty(exports, "UserCrudResolver", { enumerable: true, get: function () { return UserCrudResolver_1.UserCrudResolver; } });
+var UserSaveArticleCrudResolver_1 = require("./UserSaveArticle/UserSaveArticleCrudResolver");
+Object.defineProperty(exports, "UserSaveArticleCrudResolver", { enumerable: true, get: function () { return UserSaveArticleCrudResolver_1.UserSaveArticleCrudResolver; } });

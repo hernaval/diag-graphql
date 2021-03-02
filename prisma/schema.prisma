@@ -1,0 +1,107 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgres://uodkyrqadfceok:78e62acdd158e1c187af0e76b01ee6f7cac5603ca34ddff98737c6897a3938b1@ec2-3-232-163-23.compute-1.amazonaws.com:5432/d2dom4j5nv4o9d"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator typegraphql {
+  provider           = "typegraphql-prisma"
+  output             = "./generated/type-graphql"
+  emitTranspiledCode = true
+}
+
+// ---------------------------------- //
+// --------- ENTITIES MODEL --------- //
+// ---------------------------------- //
+model User {
+  id             String   @id @default(cuid())
+  email          String   @unique()
+  emailConfirmed Boolean?
+  passwordHash   String
+  username       String?
+  firstName      String
+  lastName       String
+  gender         String
+  function       String
+  organisation   String
+  category       String
+  companySize    String
+  activity       String
+  country        String
+  phone          String
+  status         String?
+  role           String?
+
+  forgotToken    String?
+  createdDate    DateTime?  @default(now())
+  updatedDate    DateTime?  @updatedAt()
+  Surveys        Survey[]
+  Articles       UserSaveArticle[]
+ 
+  
+}
+
+model Quiz {
+  id          String      @id @default(cuid())
+  name        String
+  createdDate DateTime?    @default(now())
+  updatedDate DateTime?    @updatedAt()
+  Dimensions  Dimension[]
+}
+
+model Dimension {
+  id          String     @id @default(cuid())
+  name        String
+  createdDate DateTime?   @default(now())
+  updatedDate DateTime?   @updatedAt()
+  Questions   Question[]
+  quizId      String
+  Quiz        Quiz       @relation(fields: [quizId], references: [id])
+}
+
+model Question {
+  id          String    @id @default(cuid())
+  sentence    String
+  createdDate DateTime?  @default(now())
+  updatedDate DateTime   @updatedAt()
+  dimensionId String
+  Dimension   Dimension @relation(fields: [dimensionId], references: [id])
+}
+
+model Survey {
+  id          String   @id @default(cuid())
+  value       Int
+  createdDate DateTime?  @default(now())
+  updatedDate DateTime?  @updatedAt
+  userId      String
+  User        User     @relation(fields: [userId], references: [id])
+}
+
+model Article{
+  id          String   @id @default(cuid())
+  title       String  
+  imageUrl    String
+  text        String   
+  author      String
+  createdDate DateTime? @default(now())
+  updatedDate DateTime  @updatedAt()
+
+  Users       UserSaveArticle[]
+
+}
+
+model UserSaveArticle{
+  userId      String
+  User        User    @relation(fields: [userId], references: [id])
+  articleId   String
+  Article     Article @relation(fields: [articleId], references: [id])
+
+  dateSaved   DateTime? @default(now())
+  @@id([userId, articleId])
+}
