@@ -8,7 +8,7 @@
   "main": "index.ts",
   "scripts": {
     "generate": "prisma generate",
-    "migrate": "prisma migrate dev --preview-feature",
+    "migrate": "prisma migrate ",
     "update": "prisma db push --preview-feature",
     "mock": "ts-node --transpile-only ./fixtures/userMock.ts",
     "start": "ts-node --transpile-only index.ts",
